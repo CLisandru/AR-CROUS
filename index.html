@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AR CROUS - Transformation magique</title>
+
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a-scene
+    mindar-image="imageTargetSrc: ./assets/crous.mind;"
+    color-space="sRGB"
+    renderer="colorManagement: true, physicallyCorrectLights"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
+
+    <a-camera
+      position="0 0 0"
+      look-controls="enabled: false">
+    </a-camera>
+
+    <!-- Contenu affiché lorsque l'enseigne est reconnue -->
+    <a-entity mindar-image-target="targetIndex: 0">
+
+      <a-box
+        position="0 0 0.1"
+        rotation="0 0 0"
+        width="0.5"
+        height="0.5"
+        depth="0.1"
+        color="#D9A7FF">
+      </a-box>
+
+      <a-text
+        value="MAGIE DETECTEE !"
+        position="0 0.45 0.1"
+        align="center"
+        color="#FFFFFF"
+        width="2.5">
+      </a-text>
+
+    </a-entity>
+
+  </a-scene>
+
+</body>
+</html>
