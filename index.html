@@ -175,7 +175,7 @@
         material="emissive: #B87924; emissiveIntensity: 0.7">
       </a-text>
 
-      <!-- Petite lumière décorative -->
+      <!-- Lumière décorative -->
       <a-sphere
         position="-0.12 0.155 0.065"
         radius="0.006"
@@ -190,70 +190,127 @@
       </a-sphere>
 
 
-      <!-- TASSE 3D -->
+      <!-- TASSE ENCHANTEE -->
 
-      <a-entity position="0.245 0.095 0.08">
-
-        <!-- Corps de la tasse -->
-        <a-cylinder
-          position="0 0 0"
-          radius="0.033"
-          height="0.045"
-          color="#E7C5FF"
-          material="metalness: 0.3; roughness: 0.25">
-        </a-cylinder>
-
-        <!-- Café -->
-        <a-circle
-          position="0 0.024 0"
-          rotation="-90 0 0"
-          radius="0.029"
-          color="#63351F">
-        </a-circle>
-
-        <!-- Anse -->
-        <a-torus
-          position="0.039 0 0"
-          rotation="90 0 90"
-          radius="0.018"
-          radius-tubular="0.005"
-          color="#FFD98A">
-        </a-torus>
+      <a-entity
+        position="0.245 0.095 0.08"
+        animation="
+          property: position;
+          to: 0.245 0.11 0.08;
+          dir: alternate;
+          dur: 1800;
+          loop: true">
 
         <!-- Soucoupe -->
         <a-cylinder
-          position="0 -0.027 0"
-          radius="0.045"
-          height="0.007"
-          color="#FFD98A">
+          position="0 -0.032 0"
+          radius="0.052"
+          height="0.009"
+          color="#D9B76C"
+          material="metalness: 0.7; roughness: 0.25">
         </a-cylinder>
 
-        <!-- Vapeur -->
-        <a-entity position="0 0.04 0">
+        <a-cylinder
+          position="0 -0.025 0"
+          radius="0.043"
+          height="0.008"
+          color="#EAD7FF">
+        </a-cylinder>
+
+        <!-- Corps de la tasse -->
+        <a-cone
+          position="0 0.005 0"
+          radius-bottom="0.027"
+          radius-top="0.039"
+          height="0.065"
+          color="#CFA7F5"
+          material="metalness: 0.35; roughness: 0.2">
+        </a-cone>
+
+        <!-- Bord supérieur doré -->
+        <a-torus
+          position="0 0.038 0"
+          rotation="90 0 0"
+          radius="0.037"
+          radius-tubular="0.003"
+          color="#FFD77D">
+        </a-torus>
+
+        <!-- Café -->
+        <a-circle
+          position="0 0.038 0"
+          rotation="-90 0 0"
+          radius="0.034"
+          color="#4B241B">
+        </a-circle>
+
+        <!-- Décoration de mousse -->
+        <a-torus
+          position="0 0.039 0"
+          rotation="90 0 0"
+          radius="0.018"
+          radius-tubular="0.002"
+          color="#D7A46D">
+        </a-torus>
+
+        <!-- Anse -->
+        <a-torus
+          position="0.043 0.005 0"
+          rotation="90 0 90"
+          radius="0.022"
+          radius-tubular="0.006"
+          color="#FFD77D">
+        </a-torus>
+
+        <!-- Décoration -->
+        <a-sphere
+          position="0 0.005 0.033"
+          radius="0.008"
+          color="#FFE8A8"
+          material="emissive: #B87924; emissiveIntensity: 0.7">
+        </a-sphere>
+
+        <!-- Vapeur magique -->
+        <a-entity position="0 0.055 0">
 
           <a-sphere
-            radius="0.009"
+            radius="0.008"
             color="#FFFFFF"
             material="transparent: true; opacity: 0.65"
             animation="
               property: position;
-              to: 0 0.05 0;
-              dur: 1200;
-              loop: true;
-              dir: alternate">
+              to: -0.008 0.055 0;
+              dur: 1300;
+              dir: alternate;
+              loop: true">
           </a-sphere>
 
           <a-sphere
-            position="0.012 0.005 0"
-            radius="0.006"
-            color="#D9A9FF"
+            position="0.012 0.015 0"
+            radius="0.007"
+            color="#D9B5FF"
             material="transparent: true; opacity: 0.6"
             animation="
               property: position;
-              to: 0.012 0.055 0;
-              dur: 1500;
-              loop: true;
-              dir: alternate">
+              to: 0.02 0.07 0;
+              dur: 1600;
+              delay: 400;
+              dir: alternate;
+              loop: true">
+          </a-sphere>
+
+          <a-sphere
+            position="-0.012 0.025 0"
+            radius="0.005"
+            color="#FFFFFF"
+            material="transparent: true; opacity: 0.55"
+            animation="
+              property: position;
+              to: -0.025 0.08 0;
+              dur: 1800;
+              delay: 800;
+              dir: alternate;
+              loop: true">
           </a-sphere>
 
         </a-entity>
@@ -261,79 +318,158 @@
       </a-entity>
 
 
-      <!-- GOBELET A EMPORTER -->
+      <!-- GOBELET MAGIQUE A EMPORTER -->
 
       <a-entity
         position="0.355 0.095 0.08"
         animation="
           property: position;
-          to: 0.355 0.11 0.08;
+          to: 0.355 0.112 0.08;
           dir: alternate;
-          dur: 1800;
+          dur: 1900;
           loop: true">
 
         <!-- Corps -->
         <a-cone
-          radius-bottom="0.032"
-          radius-top="0.022"
+          radius-bottom="0.025"
+          radius-top="0.038"
           height="0.075"
-          color="#F3E8D9">
+          color="#F4E8D9"
+          material="roughness: 0.3">
         </a-cone>
+
+        <!-- Bande décorative -->
+        <a-cylinder
+          position="0 -0.005 0"
+          radius="0.034"
+          height="0.018"
+          color="#9C61C6">
+        </a-cylinder>
+
+        <!-- Emblème doré -->
+        <a-sphere
+          position="0 0 0.035"
+          radius="0.009"
+          color="#FFD77D"
+          material="emissive: #B87924; emissiveIntensity: 0.8">
+        </a-sphere>
 
         <!-- Couvercle -->
         <a-cylinder
-          position="0 0.042 0"
-          radius="0.025"
-          height="0.008"
-          color="#D99B54">
+          position="0 0.041 0"
+          radius="0.041"
+          height="0.009"
+          color="#D6B5ED">
         </a-cylinder>
+
+        <!-- Bord du couvercle -->
+        <a-torus
+          position="0 0.045 0"
+          rotation="90 0 0"
+          radius="0.038"
+          radius-tubular="0.003"
+          color="#FFD77D">
+        </a-torus>
 
         <!-- Paille -->
         <a-cylinder
-          position="0 0.055 0"
+          position="0 0.069 0"
           radius="0.004"
-          height="0.04"
-          color="#FFFFFF">
+          height="0.045"
+          color="#FFE5A3">
         </a-cylinder>
+
+        <!-- Eclat -->
+        <a-sphere
+          position="0.027 0.025 0.025"
+          radius="0.005"
+          color="#FFFFFF"
+          material="emissive: #FFFFFF; emissiveIntensity: 2"
+          animation="
+            property: scale;
+            to: 1.8 1.8 1.8;
+            dir: alternate;
+            dur: 1000;
+            loop: true">
+        </a-sphere>
 
       </a-entity>
 
 
-      <!-- CUPCAKE -->
+      <!-- CUPCAKE ENCHANTE -->
 
       <a-entity
         position="0.445 0.095 0.08"
         animation="
-          property: rotation;
-          to: 0 0 8;
+          property: position;
+          to: 0.445 0.11 0.08;
           dir: alternate;
-          dur: 1600;
+          dur: 1700;
           loop: true">
 
-        <!-- Base du cupcake -->
+        <!-- Base -->
         <a-cone
-          radius-bottom="0.028"
-          radius-top="0.038"
+          position="0 -0.005 0"
+          radius-bottom="0.025"
+          radius-top="0.037"
           height="0.045"
-          color="#C98B60">
+          color="#B87950">
         </a-cone>
 
-        <!-- Glaçage -->
+        <!-- Bande dorée -->
+        <a-torus
+          position="0 -0.015 0"
+          rotation="90 0 0"
+          radius="0.029"
+          radius-tubular="0.003"
+          color="#FFD77D">
+        </a-torus>
+
+        <!-- Glaçage principal -->
         <a-sphere
-          position="0 0.035 0"
-          radius="0.035"
-          scale="1 0.8 1"
-          color="#FF9FD8"
+          position="0 0.029 0"
+          radius="0.036"
+          scale="1 0.75 1"
+          color="#F59BD6"
           material="
-            emissive: #A52C80;
-            emissiveIntensity: 0.5">
+            roughness: 0.3;
+            emissive: #8E367C;
+            emissiveIntensity: 0.3">
         </a-sphere>
 
-        <!-- Décoration -->
+        <!-- Glaçage supérieur -->
         <a-sphere
-          position="0 0.062 0"
+          position="0 0.052 0"
+          radius="0.022"
+          scale="1 1.1 1"
+          color="#FFB8E7">
+        </a-sphere>
+
+        <!-- Décoration dorée -->
+        <a-sphere
+          position="0 0.079 0"
           radius="0.009"
+          color="#FFE17B"
+          material="metalness: 0.6; emissive: #A66A19; emissiveIntensity: 0.6">
+        </a-sphere>
+
+        <!-- Petites décorations -->
+        <a-sphere
+          position="-0.023 0.035 0.02"
+          radius="0.004"
           color="#FFE17B">
+        </a-sphere>
+
+        <a-sphere
+          position="0.021 0.035 0.02"
+          radius="0.004"
+          color="#FFFFFF">
+        </a-sphere>
+
+        <a-sphere
+          position="0 0.02 0.034"
+          radius="0.004"
+          color="#D9A9FF">
         </a-sphere>
 
       </a-entity>
@@ -371,9 +507,7 @@
         position="-0.32 -0.16 0.08"
         radius="0.008"
         color="#FFD76A"
-        material="
-          emissive: #FFD76A;
-          emissiveIntensity: 2"
+        material="emissive: #FFD76A; emissiveIntensity: 2"
         animation="
           property: scale;
           to: 1.8 1.8 1.8;
@@ -386,9 +520,7 @@
         position="0.32 -0.15 0.08"
         radius="0.009"
         color="#D9A9FF"
-        material="
-          emissive: #D9A9FF;
-          emissiveIntensity: 2"
+        material="emissive: #D9A9FF; emissiveIntensity: 2"
         animation="
           property: scale;
           to: 1.8 1.8 1.8;
@@ -401,14 +533,67 @@
         position="0.05 0.16 0.08"
         radius="0.006"
         color="#FFFFFF"
-        material="
-          emissive: #FFFFFF;
-          emissiveIntensity: 2"
+        material="emissive: #FFFFFF; emissiveIntensity: 2"
         animation="
           property: scale;
           to: 2 2 2;
           dir: alternate;
           dur: 1000;
+          loop: true">
+      </a-sphere>
+
+
+      <!-- PARTICULES MAGIQUES SUPPLEMENTAIRES -->
+
+      <a-sphere
+        position="-0.25 0.17 0.09"
+        radius="0.005"
+        color="#FFD77D"
+        material="emissive: #FFD77D; emissiveIntensity: 2"
+        animation="
+          property: position;
+          to: -0.22 0.22 0.09;
+          dir: alternate;
+          dur: 1300;
+          loop: true">
+      </a-sphere>
+
+      <a-sphere
+        position="0.29 0.18 0.09"
+        radius="0.006"
+        color="#D9A9FF"
+        material="emissive: #D9A9FF; emissiveIntensity: 2"
+        animation="
+          property: position;
+          to: 0.32 0.23 0.09;
+          dir: alternate;
+          dur: 1600;
+          loop: true">
+      </a-sphere>
+
+      <a-sphere
+        position="0.40 0.02 0.09"
+        radius="0.005"
+        color="#FFFFFF"
+        material="emissive: #FFFFFF; emissiveIntensity: 2"
+        animation="
+          property: scale;
+          to: 2 2 2;
+          dir: alternate;
+          dur: 1100;
+          loop: true">
+      </a-sphere>
+
+      <a-sphere
+        position="-0.30 -0.05 0.09"
+        radius="0.005"
+        color="#FFD77D"
+        material="emissive: #FFD77D; emissiveIntensity: 2"
+        animation="
+          property: position;
+          to: -0.34 -0.02 0.09;
+          dir: alternate;
+          dur: 1400;
           loop: true">
       </a-sphere>
 
